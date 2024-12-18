@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parliamentary Management System</title>
+    <link rel="stylesheet" href="Admin.css">
+</head>
+<body>
+    <section class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="View1.html">
+                    <img src="images/logo.ico" alt="Parliament Logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Legislative Process</a></li>
+                    <li><a href="#">Committees</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">News and Updates</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+
+        <div class="content-wrapper">
+            <div class="text-box">
+                <h1>Admin Panel</h1>
+                <p>Details of the politician and the employee.</p>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="images/Politician.png" alt="Politician">
+                    </div>
+                    <h3>Politician</h3>
+                    <button onclick="showPoliticianData()">View Politician</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="images/citizen.png" alt="Employee">
+                    </div>
+                    <h3>Employee</h3>
+                    <button onclick="showEmployeeData()">View Employee</button>
+                </div>
+            </div>
+
+            <!-- <button class="hide-button" onclick="hideData()">Hide Data</button> -->
+
+            <!-- Politician Table Section -->
+            <div class="table-container" id="politicianTable" style="display: none;">
+                <h2>Politician Details</h2>
+                <table>
+                    <tr>
+                        <th>Politician ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                        <th>Date of Birth</th>
+                        <th>Position</th>
+                        <th>Department</th>
+                        <th>Email</th>
+                        <th>Contact Number</th>
+                        <th>Address</th>
+                        <th>Hire Date</th>
+                        <th>Salary</th>
+                    </tr>
+                    <tr>
+                        <td>101</td>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>Male</td>
+                        <td>1980-05-12</td>
+                        <td>Member of Parliament</td>
+                        <td>Legislative</td>
+                        <td>john.doe@parliament.com</td>
+                        <td>+123456789</td>
+                        <td>123 Street, City</td>
+                        <td>2010-03-01</td>
+                        <td>$5000</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Employee Table Section -->
+            <div class="table-container" id="employeeTable" style="display: none;">
+                <h2>Employee Details</h2>
+                <table>
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                        <th>Date of Birth</th>
+                        <th>Position</th>
+                        <th>Department</th>
+                        <th>Email</th>
+                        <th>Contact Number</th>
+                        <th>Address</th>
+                        <th>Hire Date</th>
+                        <th>Salary</th>
+                    </tr>
+                    <tr>
+                        <td>201</td>
+                        <td>Jane</td>
+                        <td>Smith</td>
+                        <td>Female</td>
+                        <td>1992-03-14</td>
+                        <td>Software Engineer</td>
+                        <td>IT</td>
+                        <td>jane.smith@company.com</td>
+                        <td>+987654321</td>
+                        <td>456 Avenue, City</td>
+                        <td>2018-05-10</td>
+                        <td>$6000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showPoliticianData() {
+            document.getElementById("politicianTable").style.display = "block";
+            document.getElementById("employeeTable").style.display = "none";
+        }
+
+        function showEmployeeData() {
+            document.getElementById("employeeTable").style.display = "block";
+            document.getElementById("politicianTable").style.display = "none";
+        }
+
+        function hideData() {
+            document.getElementById("politicianTable").style.display = "none";
+            document.getElementById("employeeTable").style.display = "none";
+        }
+    </script>
+</body>
+</html>

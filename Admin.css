@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.8), rgba(4,9,30,0.8)),
+        url(images/1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 6%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links ul li {
+    list-style: none;
+    position: relative;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: sans-serif;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links ul li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f44366;
+    transition: width 0.3s ease;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+
+/* Content Wrapper */
+.content-wrapper {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+/* Card Styles */
+.card-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 200px;
+}
+
+.card img {
+    width: 100px;
+}
+
+.card button {
+    background-color: #f44366;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #d63355;
+}
+
+/* Table Styles */
+.table-container {
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.table-container h2 {
+    background-color: #f44366;
+    color: white;
+    padding: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #f44366;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Hide Button */
+.hide-button {
+    background-color: #555;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 1rem auto;
+    display: block;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hide-button:hover {
+    background-color: #333;
+}

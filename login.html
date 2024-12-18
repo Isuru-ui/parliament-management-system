@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parliamentary Management System - Data Entry</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="View1.html">
+                <img src="images/logo.ico" alt="Parliament Logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Legislative Process</a></li>
+                <li><a href="#">Committees</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">News and Updates</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="form-container">
+            <h1>Data Entry Form</h1>
+            
+            <div class="role-selector">
+                <label>
+                    <input type="radio" name="role" value="politician" onclick="showForm('politician')">
+                    Politician
+                </label>
+                <label>
+                    <input type="radio" name="role" value="employee" onclick="showForm('employee')">
+                    Employee
+                </label>
+            </div>
+
+            <form id="politicianForm" class="data-form" style="display:none;">
+                <h2>Politician Details</h2>
+                <div class="form-group">
+                    <label for="politicianId">Politician ID:</label>
+                    <input type="text" id="politicianId" name="politicianId" required>
+                </div>
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="position">Position:</label>
+                    <input type="text" id="position" name="position" required>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department:</label>
+                    <input type="text" id="department" name="department" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactNumber">Contact Number:</label>
+                    <input type="tel" id="contactNumber" name="contactNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="hireDate">Hire Date:</label>
+                    <input type="date" id="hireDate" name="hireDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="salary">Salary:</label>
+                    <input type="text" id="salary" name="salary" required>
+                </div>
+                <button type="submit" class="submit-btn">Submit Politician Data</button>
+            </form>
+
+            <form id="employeeForm" class="data-form" style="display:none;">
+                <h2>Employee Details</h2>
+                <div class="form-group">
+                    <label for="employeeId">Employee ID:</label>
+                    <input type="text" id="employeeId" name="employeeId" required>
+                </div>
+                <div class="form-group">
+                    <label for="empFirstName">First Name:</label>
+                    <input type="text" id="empFirstName" name="empFirstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="empLastName">Last Name:</label>
+                    <input type="text" id="empLastName" name="empLastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="empGender">Gender:</label>
+                    <select id="empGender" name="empGender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="empDob">Date of Birth:</label>
+                    <input type="date" id="empDob" name="empDob" required>
+                </div>
+                <div class="form-group">
+                    <label for="empPosition">Position:</label>
+                    <input type="text" id="empPosition" name="empPosition" required>
+                </div>
+                <div class="form-group">
+                    <label for="empDepartment">Department:</label>
+                    <input type="text" id="empDepartment" name="empDepartment" required>
+                </div>
+                <div class="form-group">
+                    <label for="empEmail">Email:</label>
+                    <input type="email" id="empEmail" name="empEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="empContactNumber">Contact Number:</label>
+                    <input type="tel" id="empContactNumber" name="empContactNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="empAddress">Address:</label>
+                    <textarea id="empAddress" name="empAddress" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="empHireDate">Hire Date:</label>
+                    <input type="date" id="empHireDate" name="empHireDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="empSalary">Salary:</label>
+                    <input type="text" id="empSalary" name="empSalary" required>
+                </div>
+                <button type="submit" class="submit-btn">Submit Employee Data</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showForm(type) {
+            const politicianForm = document.getElementById('politicianForm');
+            const employeeForm = document.getElementById('employeeForm');
+
+            if (type === 'politician') {
+                politicianForm.style.display = 'block';
+                employeeForm.style.display = 'none';
+            } else if (type === 'employee') {
+                politicianForm.style.display = 'none';
+                employeeForm.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
